@@ -1,0 +1,24 @@
+[30-Oct-2022 05:41:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function page_only_visible() in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php on line 2
+[30-Oct-2022 05:44:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function page_only_visible() in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php on line 2
+[30-Oct-2022 05:46:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function page_only_visible() in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php on line 2
+[30-Oct-2022 05:47:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function page_only_visible() in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php on line 2
+[30-Oct-2022 05:58:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function page_only_visible() in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php on line 2
+[30-Oct-2022 05:58:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function page_only_visible() in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/nikhub/public_html/tapassya-new/wp-content/themes/tapassyanew/templates/template-kishalay-donation.php on line 2

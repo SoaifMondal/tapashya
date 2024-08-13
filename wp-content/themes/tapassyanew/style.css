@@ -1,0 +1,17 @@
+/*
+Theme Name: Weaver's Web
+Author: Weaver's Web Team
+Theme URI: weavers-web.com
+Tags: Weaver's Web
+Version: :Latest Version
+*/
+#what-we-do .slider-button img{display: initial; width: auto;}
+.field_error.row_error, .sign_in.row_error, .member-sign-up.row_error, .student-sign-up.row_error, #reset_pass.row_error, #forget_pass.row_error{color:#ff0b0b}
+#student-sign-up.success, #member-sign-up.success, #raise-request.success, #confirm-request.success, #student-update-msg.success, #student-bioupdate-msg.success, #reset_pass.success, #forget_pass.success{color:#287c27}
+.profile-pic-wrap img{border-radius:50%;}
+.credit-list-wrap{width:100%; overflow-x:scroll; height: 845px; overflow-y: scroll;}
+.donate-from-wrap, .spent-to-wrap{width:100%; overflow-x:scroll; height: 550px; overflow-y: scroll;}
+.donate-from-btn, .spent-to-btn{color: #fff !important;}
+.donate-from-wrap h4, .spent-to-wrap h4{font-weight: 700;}
+.credit-list-wrapper{width:100%; overflow-x:scroll; height: 300px; overflow-y: scroll;}
+.user-list-wrapper{width:100%; overflow-x:scroll; height: 800px; overflow-y: scroll;}

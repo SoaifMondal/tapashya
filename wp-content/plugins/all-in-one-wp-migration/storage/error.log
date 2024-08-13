@@ -1,0 +1,6 @@
+Jul 24 2024 10:19:31
+{"type":8192,"message":"Using ${var} in strings is deprecated, use {$var} instead","file":"\/home\/SA0CqU830mJ1dd95jH\/public_html\/web\/wp-content\/plugins\/wp-mail-smtp\/vendor\/woocommerce\/action-scheduler\/classes\/schema\/ActionScheduler_LoggerSchema.php","line":83}
+
+Jul 24 2024 10:19:31
+{"type":8192,"message":"Using ${var} in strings is deprecated, use {$var} instead","file":"\/home\/SA0CqU830mJ1dd95jH\/public_html\/web\/wp-content\/plugins\/wp-mail-smtp\/vendor\/woocommerce\/action-scheduler\/classes\/schema\/ActionScheduler_LoggerSchema.php","line":83}
+

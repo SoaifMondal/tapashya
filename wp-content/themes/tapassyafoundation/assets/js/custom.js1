@@ -1,0 +1,111 @@
+// for sticky header
+jQuery(window).scroll(function () {
+    if (jQuery(window).scrollTop() >= 200) {
+        jQuery('body').addClass('header-sticky');
+    }
+    else {
+        jQuery('body').removeClass('header-sticky');
+    }
+});
+
+jQuery(document).ready(function(){
+     jQuery('.nav-btn').click(function() {
+        jQuery('body').toggleClass('open');
+    });
+    jQuery('.nav-btn-close').click(function() {
+        jQuery('body').removeClass('open');
+    });
+
+    
+jQuery(window).resize(function() {
+  if (window.innerWidth <= 1199) {
+      jQuery(".main-menu ul li.menu-item-has-children").each(function() {
+          if (jQuery(this).children(".arrow").length === 0) {
+              jQuery(this).children("a").after("<span class='arrow'><i class='fas fa-chevron-down'></i></span>");
+          }
+      });
+
+      jQuery(".main-menu ul li.menu-item-has-children .arrow").off('click').on('click', function() {
+          if (jQuery(this).next().is(":visible")) {
+              jQuery(this).children(".fas").removeClass("fa-chevron-up");
+              jQuery(this).children(".fas").addClass("fa-chevron-down");
+              jQuery(this).next().slideUp();
+          } else {
+              jQuery(".main-menu ul li.menu-item-has-children .arrow .fas").removeClass("fa-chevron-up");
+              jQuery(".main-menu ul li.menu-item-has-children .arrow .fas").addClass("fa-chevron-down");
+              jQuery(".main-menu ul li.menu-item-has-children .arrow").next().slideUp();
+              jQuery(this).children(".fas").removeClass("fa-chevron-down");
+              jQuery(this).children(".fas").addClass("fa-chevron-up");
+              jQuery(this).next().slideDown();
+          }
+      });
+  } else {
+      jQuery(".main-menu ul li.menu-item-has-children .arrow").remove();
+  }
+}).resize();
+    
+});
+
+jQuery(document).ready(function(){
+
+
+  jQuery('.stories-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+
+    responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+
+  });
+
+  jQuery('.events-silder').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        },
+
+
+      ]
+
+
+  });
+
+
+  
+
+  
+
+});
+
+
+
+
+
+
+
+
