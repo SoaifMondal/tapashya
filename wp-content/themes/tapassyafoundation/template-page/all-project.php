@@ -71,13 +71,14 @@ get_header(); ?>
                                         'post_type' => 'project',
                                         'post_status' => array('publish', 'pending', 'draft', 'auto-draft', 'future', 'private', 'inherit', 'trash'),
                                         'posts_per_page' => -1,
+                                        'order' => 'DESC',
                                         'author' => $user_id
                                     );
                                     $projects = new WP_Query($args);
                                     if ($projects->have_posts()) :
                                         while ($projects->have_posts()) : $projects->the_post();
-                                         echo   $project_id = get_the_ID();
-                                           echo $pId = get_post_meta($project_id, 'project_id', true);
+                                            $project_id = get_the_ID();
+                                            $pId = get_post_meta($project_id, 'project_id', true);
                                             $project_name = get_the_title();
                                             $purpose = get_the_excerpt();
                                             $short_description = get_post_meta($project_id, 'short_description', true);
@@ -87,9 +88,9 @@ get_header(); ?>
                                             $status = get_post_status($project_id );
                                             ?>
                                             <tr>
-                                                <td><?php echo $pId; ?></td>
-                                                <td><?php echo esc_html($project_name); ?></td>
                                                 <td><?php echo esc_html($pId); ?></td>
+                                                <td><?php echo esc_html($project_name); ?></td>
+                                                <td><?php echo "nill"; ?></td>
                                                 <td><?php echo esc_html($short_description); ?></td>
                                                 <td><?php echo esc_html($short_code); ?></td>
                                                 <td><?php echo esc_html($beneficiary_type); ?></td>
@@ -131,4 +132,57 @@ get_header(); ?>
 
     </div>
 </section>
+
+<script>
+        jQuery(document).ready(function($) {
+            $(".dlt").click(function() {
+                var valdl = $(this).data('attribute');
+                var clickedElement = this; 
+                Swal.fire({
+                title: "Are you sure?",
+                text: "But you will still be able to retrieve this file.",
+                icon: "warning", 
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, archive it!",
+                cancelButtonText: "No, cancel please!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+                }).then((result) => {
+                if (result.isConfirmed) {
+                
+                        jQuery.ajax({
+                                url: ajaxurl,
+                                type: 'POST',
+                                data: { 
+                                    action : 'project_delete',
+                                    delval : valdl 
+                                },
+                                success: function(response) {
+                                    Swal.fire({
+                                                title: "success!",
+                                                text:  "Delete successfully!",
+                                                icon:  "success"
+                                                }).then((result) => {
+                                                if (result.isConfirmed) {
+                                                    $(clickedElement).closest('tr').fadeOut(500, function() {
+                                                        $(this).remove(); 
+                                                    });
+                                                }
+                                            });
+                                },
+                                error: function(error) {
+                                    Swal.fire({
+                                                icon: 'error',
+                                                title: 'Error',
+                                                text: response.data || 'An unknown error occurred. Please try again.'
+                                            });
+                                        }
+                            });
+
+                    }
+                });
+            });
+        });
+</script>
 <?php get_footer(); ?>

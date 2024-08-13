@@ -270,6 +270,7 @@ validate.validators.dateIsAfterToday = function(value, options, key, attributes)
 
 // Example of how to validate the form on submit
 jQuery('#raise_payment_request_form_button').click(function(event) {
+    console.log('hello');
     event.preventDefault();
     
     // Get form values

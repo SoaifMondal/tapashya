@@ -1,6 +1,12 @@
 <?php
 //Template name: Benificiary member dashboard
 get_header();
+
+$current_user = wp_get_current_user();
+
+$id = $current_user->ID;
+$user_email = $current_user->user_email;
+$user_name = $current_user->display_name;
 ?>
 <!-- Member Banner Section -->
 <?php echo get_template_part('template-parts/members/memberbanner'); ?>
@@ -11,11 +17,13 @@ get_header();
         <?php echo get_template_part('template-parts/members/volunteer'); ?>
         <!-- volunteer part -->
         <div class="dashboard-main-wrap d-flex justify-content-between">
-            <!-- student sidebar -->
-            <?php echo get_template_part('template-parts/student/studentsidebar'); ?>
+            <!-- Benificiary Member menu side bar -->
+            <?php echo get_sidebar('benificiarymenu'); ?>
+            <!-- Benificiary Member menu side bar -->
+
             <div class="dashboard-desc">
                 <div class="dashboard-desc-main student-dashboard">
-                  
+
                     <div class="student-dashboard-info">
 
                         <div class="dashboard-home-desc">
@@ -23,7 +31,7 @@ get_header();
                                 <h2>Welcome to Nabadiganta Tapassya Foundation!</h2>
                                 <h5>Hello, <?php echo $first_name; ?> <?php echo $last_name; ?>!</h5>
                                 <p>We are thrilled to have you as part of our community. Here's what you can do from your dashboard:</p>
-                              
+
                             </div>
                             <div class="student-profile-wrap d-flex align-items-center justify-content-between">
                                 <div class="profile-img-info d-flex align-items-center">
@@ -37,7 +45,7 @@ get_header();
                                     </div>
                                     <div class="img-desc">
                                         <p>Name</p>
-                                        <h6>Anima Khamari</h6>
+                                        <h6><?php echo $user_name; ?></h6>
                                     </div>
                                 </div>
                                 <div class="right-btn">
@@ -193,12 +201,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="student-dashboard-info">
-                        <div class="board-title">
-                            <h3>Education</h3>
-                        </div>
-
-                    </div>
+               
                 </div>
             </div>
 
